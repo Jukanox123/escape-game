@@ -1,5 +1,20 @@
+<?php
+
+session_start();
+
+if (isset($_POST['formconnexion'])) {
+    $mdpconnect = $_POST['mdpconnect'];
+
+    if ($mdpconnect == 478935) {
+        $erreur = "YOU RIGHT <br /> <a href=\"test.php\" class=\"link\" style=\"text-decoration: none; padding-left: 55px;\">GO</a>";
+    } else {
+        $erreur = "YOU WRONG";
+    }
+}
+?>
+
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -17,12 +32,20 @@
 
 <div class="container">
     <div class="row">
-        <form class="form-signin col-md-6 offset-md-3 pt-3">
+        <form class="form-signin col-md-6 offset-md-3 pt-3" method="POST" action="index.php">
             <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required><br>
-            <button class="btn btn-lg btn-danger btn-block" type="submit">Login</button>
+            <input type="password" name="mdpconnect" id="inputPassword" class="form-control" placeholder="Password"
+                   required><br>
+            <button class="btn btn-lg btn-danger btn-block" name="formconnexion" type="submit">Login</button>
         </form>
     </div>
+    <br>
+    <?php
+    if (isset($erreur)) {
+        echo '<h4 class="col-md-2 offset-md-5">' . $erreur . "</h4>";
+    }
+    ?>
+
 </div>
 
 <script>
