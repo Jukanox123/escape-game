@@ -1,13 +1,17 @@
 body {
   font-family: "Circular Std Book", sans-serif;
   background-color: #000;
-  color: #fff;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  color: red;
+  margin: 0;
+  padding: 0;
   border: none;
-  cursor: default; }
-
-h4 {
-  color: green; }
+  cursor: default;
+  overflow-x: hidden; }
+  body h4 {
+    color: green; }
+  body #cd {
+    margin: 2em;
+    font-size: 30px;
+    font-weight: 100; }
 
 /*# sourceMappingURL=style.css.map */

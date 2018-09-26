@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 if (isset($_POST['formconnexion'])) {
     $mdpconnect = $_POST['mdpconnect'];
 
@@ -20,19 +18,63 @@ if (isset($_POST['formconnexion'])) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Hacked Game</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <audio src="music/mood.wav" autoplay></audio>
 </head>
 <body>
 
 <script src="js/three.js"></script>
 <script src="js/OBJLoader.js"></script>
 
+
+<?php
+session_start();
+if (!isset($_SESSION['endOfTimer'])) {
+    $endOfTimer = time() + 10;
+    $_SESSION['endOfTimer'] = $endOfTimer;
+}
+
+if (($_SESSION['endOfTimer'] - time()) < 0) {
+    $timeTilEnd = 0;
+} else {
+    $timeTilEnd = $_SESSION['endOfTimer'] - time();
+}
+
+if ($timeTilEnd <= 0) {
+    session_destroy();
+}
+
+?>
+
+<h2>You have <span id="timer"><?php echo $timeTilEnd; ?></span> seconds left</h2>
+
+
+<script>
+    var TimeLeft = <?php echo $timeTilEnd; ?>;
+
+    function countdown() {
+        if (TimeLeft > 0) {
+            TimeLeft -= 1;
+            document.getElementById('timer').innerHTML = TimeLeft;
+        }
+        if (TimeLeft < 1) {
+            window.location = "lost/"
+        }
+    }
+
+    CountFunc = setInterval(countdown, 1000);
+</script>
+
+
 <div class="container">
     <div class="row">
-        <form class="form-signin col-md-6 offset-md-3 pt-3" method="POST" action="index.php">
+        <form class="form-signin pt-3" method="POST" action="index.php">
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" name="mdpconnect" id="inputPassword" class="form-control" placeholder="Password"
                    required><br>
@@ -42,12 +84,15 @@ if (isset($_POST['formconnexion'])) {
     <br>
     <?php
     if (isset($erreur)) {
-        echo '<h4 class="col-md-2 offset-md-5">' . $erreur . "</h4>";
+        echo '<h4>' . $erreur . "</h4>";
     }
     ?>
 
 </div>
 
+<!--------------->
+<!-- 3D OBJECT -->
+<!--------------->
 <script>
     var container;
     var camera, scene, renderer;
@@ -63,7 +108,9 @@ if (isset($_POST['formconnexion'])) {
         container = document.createElement('div');
         document.body.appendChild(container);
         camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
-        camera.position.z = 30;
+        camera.position.z = 170;
+        camera.position.y = 700;
+        camera.position.x = 100;
         // scene
         scene = new THREE.Scene();
         var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4);
@@ -77,7 +124,7 @@ if (isset($_POST['formconnexion'])) {
             object.traverse(function (child) {
                 if (child.isMesh) child.material.map = texture;
             });
-            object.position.y = -5;
+            object.position.y = -65;
             scene.add(object);
         }
 
@@ -87,7 +134,7 @@ if (isset($_POST['formconnexion'])) {
         };
         // texture
         var textureLoader = new THREE.TextureLoader(manager);
-        var texture = textureLoader.load('textures/code.png');
+        var texture = textureLoader.load('textures/vase_final.jpg');
 
         // model
         function onProgress(xhr) {
@@ -101,7 +148,7 @@ if (isset($_POST['formconnexion'])) {
         }
 
         var loader = new THREE.OBJLoader(manager);
-        loader.load('obj/casse-tete-final.obj', function (obj) {
+        loader.load('obj/vase_final.obj', function (obj) {
             object = obj;
         }, onProgress, onError);
         //
@@ -140,7 +187,9 @@ if (isset($_POST['formconnexion'])) {
         renderer.render(scene, camera);
     }
 </script>
-
+<!--------------->
+<!-- /3D OBJECT -->
+<!--------------->
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
