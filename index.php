@@ -64,7 +64,7 @@ if ($timeTilEnd <= 0) {
             document.getElementById('timer').innerHTML = TimeLeft;
         }
         if (TimeLeft < 1) {
-            window.location = "lost/"
+            window.location = "lost2/"
         }
     }
 

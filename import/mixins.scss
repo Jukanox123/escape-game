@@ -4,3 +4,9 @@
   -webkit-animation: $animation;
   animation: $animation;
 }
+
+@mixin anim($name, $dur, $iterate) {
+  animation-name: $name;
+  animation-duration: $dur;
+  animation-iteration-count:$iterate;
+}
