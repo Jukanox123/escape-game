@@ -15,7 +15,7 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-        <p class="col-md-12 pt-3" style="color: green;">DONNÉES PERSONNELLES RÉCUPÉRÉES <br>BRAVO !</p>
+        <p class="col-md-12 pt-3" style="color: green;">DONNÉES PERSONNELLES RÉCUPÉRÉES<br>BRAVO !</p>
     </div>
 </div>
 
