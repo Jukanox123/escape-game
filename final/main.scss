@@ -1,0 +1,68 @@
+@import "../import/variables";
+@import "../import/mixins";
+
+body {
+  background-color: $black;
+  text-align: center;
+
+  h2 {
+    color: $red;
+  }
+}
+
+.button-wrap {
+  position: relative;
+  margin: 100px auto 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 500px;
+}
+
+button span {
+  display: block;
+  font-size: 20px;
+  letter-spacing: normal;
+  font-weight: normal;
+  color: $black;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+button:hover span {
+  opacity: 1;
+  color: $black;
+}
+
+button {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  border-radius: 100%;
+  margin-top: 5%;
+  font-weight: bold;
+  letter-spacing: -.05em;
+  color: #ccc;
+  font-size: 55px;
+  cursor: pointer;
+  z-index: 2;
+  border: 1px solid #fafafa;
+  transition: drop-shadow .25s ease;
+  background-color: #DF0837;
+}
+
+.button-wrap:active {
+}
+
+.button-wrap:active:before {
+  width: 96%;
+  height: 96%;
+  left: 2%;
+  top: 2%;
+}
+
+button:hover {
+  color: $white;
+  background-color: #b9072e;
+}
+
+

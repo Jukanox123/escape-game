@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -13,17 +14,15 @@
 
 <body>
 
-<h1>
-    <svg role="img">
-        <text class="word" dominant-baseline="central" fill="#222" stroke="#222" stroke-linecap="round"
-              stroke-width="1.5%" text-anchor="middle" x="50%" y="50%">You failed!
-        </text>
-        <text class="word" dominant-baseline="central" fill="white" text-anchor="middle" x="50%" y="50%">You failed!
-        </text>
-    </svg>
-</h1>
+<div class="container-fluid">
+    <div class="row">
+        <p class="col-md-12 pt-3">DONNÉES PERSONNELLES ENVOYÉES</p>
+    </div>
+    <div class="row">
+        <img src="../images/troll_face.png" alt="Troll Face" class="offset-md-5">
+    </div>
+</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="../js/main.js"></script>
 </body>
+
 </html>

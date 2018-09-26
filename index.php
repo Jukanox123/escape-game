@@ -4,9 +4,9 @@ if (isset($_POST['formconnexion'])) {
     $mdpconnect = $_POST['mdpconnect'];
 
     if ($mdpconnect == 478935) {
-        $erreur = "YOU RIGHT <br /> <a href=\"test.php\" class=\"link\" style=\"text-decoration: none; padding-left: 55px;\">GO</a>";
+        $erreur = "CORRECT <br /> <a href=\"final/\" class=\"link\" style=\"text-decoration: none; padding-left: 55px;\">GO</a>";
     } else {
-        $erreur = "YOU WRONG";
+        $erreur = "FAUX";
     }
 }
 ?>
@@ -19,7 +19,7 @@ if (isset($_POST['formconnexion'])) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Hacked Game</title>
+    <title>Hack Game</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -52,7 +52,7 @@ if ($timeTilEnd <= 0) {
 
 ?>
 
-<h2>You have <span id="timer"><?php echo $timeTilEnd; ?></span> seconds left</h2>
+<h2>Plus que <span id="timer"><?php echo $timeTilEnd; ?></span> secondes</h2>
 
 
 <script>
