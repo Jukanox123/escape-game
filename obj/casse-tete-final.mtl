@@ -1,0 +1,86 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 25.09.2018 14:06:01
+
+newmtl Material__40
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\justi\Downloads\casse-tete-textures\ID6\Casse-tete-uv_ok2_06 - Default_BaseColor.png
+	map_Kd C:\Users\justi\Downloads\casse-tete-textures\ID6\Casse-tete-uv_ok2_06 - Default_BaseColor.png
+
+newmtl Piece1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\justi\Downloads\casse-tete-textures\ID2\Casse-tete-uv_ok2_02 - Default_BaseColor.png
+	map_Kd C:\Users\justi\Downloads\casse-tete-textures\ID2\Casse-tete-uv_ok2_02 - Default_BaseColor.png
+
+newmtl Piece3
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\justi\Downloads\casse-tete-textures\ID4\Casse-tete-uv_ok2_04 - Default_BaseColor.png
+	map_Kd C:\Users\justi\Downloads\casse-tete-textures\ID4\Casse-tete-uv_ok2_04 - Default_BaseColor.png
+
+newmtl Piece2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\justi\Downloads\casse-tete-textures\ID3\Casse-tete-uv_ok2_03 - Default_BaseColor.png
+	map_Kd C:\Users\justi\Downloads\casse-tete-textures\ID3\Casse-tete-uv_ok2_03 - Default_BaseColor.png
+
+newmtl Piece4
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\justi\Downloads\casse-tete-textures\ID5\Casse-tete-uv_ok2_05 - Default_BaseColor.png
+	map_Kd C:\Users\justi\Downloads\casse-tete-textures\ID5\Casse-tete-uv_ok2_05 - Default_BaseColor.png
+
+newmtl Base_texture
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\justi\Downloads\casse-tete-textures\ID1\Casse-tete-uv_ok2_01 - Default_BaseColor.png
+	map_Kd C:\Users\justi\Downloads\casse-tete-textures\ID1\Casse-tete-uv_ok2_01 - Default_BaseColor.png
