@@ -12,7 +12,7 @@ if (isset($_POST['formconnexion'])) {
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"

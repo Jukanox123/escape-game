@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -51,7 +51,7 @@ if ($timeTilEnd <= 0) {
 
 
 <div class="button-wrap">
-    <a href="../lost-final/">
+    <a href="lost-final/">
         <button type="button">RÉCUPÈRE TES DONNÉES<span>Aller tu y es presque !</span></button>
     </a>
 </div>

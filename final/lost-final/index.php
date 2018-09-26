@@ -14,12 +14,12 @@
 
 <body>
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <p class="col-md-12 pt-5">GAME OVER</p>
+        <p class="col-md-12 pt-3">DONNÉES PERSONNELLES ENVOYÉES</p>
     </div>
     <div class="row">
-        <img src="../images/troll_face.png" alt="Troll Face" class="offset-md-4">
+        <img src="../../images/troll_face.png" alt="Troll Face" class="offset-md-5">
     </div>
 </div>
 
